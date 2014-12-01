@@ -1,0 +1,139 @@
+
+	<link rel="stylesheet" href="css/indexPage/boardCommand.css" type="text/css">
+	
+	<div class="wrapper" id="wrapperJointPosition" name="Control Position">
+		<div class="row placeholders">
+			<div class="col-xs-10 col-xs-offset-1">
+				<input id="joint0" type="range" min="0" max="360" value="180" oninput="RangeFunctionOnChange({'jointNumber':0,'jointAngleRad': parseFloat(Math.PI*value/360)})">
+				<h2>Joint 1</h2>
+				<span class="text-muted">rotational joint</span>
+			</div>
+		</div>
+		<div class="row placeholders">
+			<div class="col-xs-10 col-xs-offset-1">
+				<input id="joint1" type="range" min="0" max="360" value="180" oninput="RangeFunctionOnChange({'jointNumber':1,'jointAngleRad': parseFloat(Math.PI*value/360)})">
+				<h2>Joint 2</h2>
+				<span class="text-muted">rotational joint</span>
+			</div>
+		</div>
+		<div class="row placeholders">
+			<div class="col-xs-10 col-xs-offset-1">
+				<input id="joint2" type="range" min="0" max="360" value="180" oninput="RangeFunctionOnChange({'jointNumber':2,'jointAngleRad': parseFloat(Math.PI*value/360)})">
+				<h2>Joint 3</h2>
+				<span class="text-muted">rotational joint</span>
+			</div>
+		</div>
+		<div class="row placeholders">
+			<div class="col-xs-10 col-xs-offset-1">
+				<input id="joint3" type="range" min="0" max="360" value="180" oninput="RangeFunctionOnChange({'jointNumber':3,'jointAngleRad': parseFloat(Math.PI*value/360)})">
+				<h2>Joint 4</h2>
+				<span class="text-muted">rotational joint</span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="teachOutside">
+	
+		<div id="topContainer">
+			<div id="lcdDisplay"><span id="lcdContent"></span></div>
+			<div id="eStopContainer">
+				<div id="eStop"></div>
+			</div>
+	
+			<div id="modeContainer">
+				<div id="jointMode" class="modeButtons"><span>joint</span><div id="jointModeLight" class="ledLight"></div></div>
+				<div id="worldMode" class="modeButtons"><span>world</span><div id="worldModeLight" class="ledLight"></div></div>
+				<div id="toolMode" class="modeButtons"><span>tool</span><div id="toolModeLight" class="ledLight"></div></div>
+			</div>
+	
+		</div>
+	
+		<div id="bottomContainer">
+			<div id="controlButtonContainer">
+				<a href="#" onclick="selectMe('x1');lcdDisplay()"><div id="x1Button" class="functionButton"><p>X1</p></div></a>
+				<a href="#" onclick="selectMe('y2');lcdDisplay()"><div id="y2Button" class="functionButton"><p>Y2</p></div></a>
+				<a href="#" onclick="selectMe('z3');lcdDisplay()"><div id="z3Button" class="functionButton"><p>Z3</p></div></a>
+				<a href="#" onclick="selectMe('rx');lcdDisplay()"><div id="rx4Button" class="functionButton"><p>RX4</p></div></a>
+				<a href="#" onclick="selectMe('ry');lcdDisplay()"><div id="ry5Button" class="functionButton"><p>RY5</p></div></a>
+				<a href="#" onclick="selectMe('rz');lcdDisplay()"><div id="rz6Button" class="functionButton"><p>RZ6</p></div></a>
+				<a href="#" onclick="selectMe('t1');lcdDisplay()"><div id="t1Button" class="functionButton"><p>T1</p></div></a>		
+				<a href="#" onclick="selectMe('step');lcdDisplay()"><div id="stepButton" class="functionButton"><p>STEP</p></div></a>
+			</div>
+	
+			<div id="secondContainer">
+				<a href="#" onclick="nextMode();"><div id="manHalt" class="functionButton"><p>MAN<br/>HALT</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>COM<br/>PWR</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>YES</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>9</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>6</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>3</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>DEL</p></div></a>
+			</div>
+	
+			<div id="thirdContainer">
+				<a href="#"><div id="" class="functionButton"><p>DIS<br/>PWR</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>NO</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>8</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>5</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>2</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>.</p></div></a>
+			</div>
+	
+			<div id="fourthContainer">
+				<a href="#"><div id="" class="functionButton"><p>RUN<br/>HOLD</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>REC<br/>DONE</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>7</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>4</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>1</p></div></a>
+				<a href="#"><div id="" class="functionButton"><p>0</p></div></a>
+			</div>
+	
+			<div id="reverseButtons">
+				<a href="#" onmousedown="reverse('5')" onmouseup="buttonReleased()"><div id="slow1" class="reverseButton"></div></a>
+				<a href="#" onmousedown="reverse('4')" onmouseup="buttonReleased()"><div id="slow2" class="reverseButton"></div></a>
+				<a href="#" onmousedown="reverse('3')" onmouseup="buttonReleased()"><div id="slow3" class="reverseButton"></div></a>
+				<a href="#" onmousedown="reverse('2')" onmouseup="buttonReleased()"><div id="slow4" class="reverseButton"></div></a>
+				<a href="#" onmousedown="reverse('1')" onmouseup="buttonReleased()"><div id="slow5" class="reverseButton"></div></a>
+				<span id="minusSign">-</span>
+			</div>
+	
+			<div id="forwardButtons">
+				<span id="plusSign">+</span>
+				<div id="forwardContainer">
+					<a href="#" onmousedown="forward('1')" onmouseup="buttonReleased()"><div id="fast1" class="forwardButton"></div></a>
+					<a href="#" onmousedown="forward('2')" onmouseup="buttonReleased()"><div id="fast2" class="forwardButton"></div></a>
+					<a href="#" onmousedown="forward('3')" onmouseup="buttonReleased()"><div id="fast3" class="forwardButton"></div></a>
+					<a href="#" onmousedown="forward('4')" onmouseup="buttonReleased()"><div id="fast4" class="forwardButton"></div></a>
+					<a href="#" onmousedown="forward('5')" onmouseup="buttonReleased()"><div id="fast5" class="forwardButton"></div></a>
+				</div>
+			</div>
+	
+			<div id="tempButtons">
+		
+				<input type="button" value="Rotate Joint 2" onmousedown="buttonClicked()" onmouseup="buttonReleased()" oncontextmenu="return false" />
+				<input type="button" value="Reverse Joint 2" onmousedown="buttonClickedBack()" onmouseup="buttonReleased()" oncontextmenu="return false"/><br/><br/>
+			
+				<input type="button" value="Rotate Joint 3" onmousedown="joint3Clicked()" onmouseup="buttonReleased()" oncontextmenu="return false"/>
+				<input type="button" value="Reverse Joint 3" onmousedown="joint3ClickedBack()" onmouseup="buttonReleased()" oncontextmenu="return false"/><br/><br/>
+			
+				<input type="button" value="Rotate Joint 5" onmousedown="joint5Clicked()" onmouseup="buttonReleased()" oncontextmenu="return false"/>
+				<input type="button" value="Reverse Joint 5" onmousedown="joint5ClickedBack()" onmouseup="buttonReleased()" oncontextmenu="return false"/><br/><br/>
+		
+			</div>
+		</div>
+	
+		<div id="handle">
+			<div id="deadManSwitch"></div>
+		</div>
+	</div>
+
+		
+
+  
+	<script src="js/jquery/jquery-1.11.0.min.js"></script>
+	<script src="js/indexPage/backbone/lib/underscore-min.js"></script>
+	<script src="js/indexPage/backbone/lib/backbone-min.js"></script>	
+	<script src="/socket.io/socket.io.js"></script>   
+	<script src="js/indexPage/messageToServer.js"></script>
+	<script src="js/indexPage/boardCommand.js"></script>
+	

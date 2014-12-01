@@ -1,0 +1,389 @@
+
+header {
+		height: 100px;
+		background-color: #252525;
+}
+
+a{
+		text-decoration: none;
+}
+
+#logo h1{
+		float: right;
+		padding-right: 15px;
+		padding-top: 10px;
+		font-family: Helvetica, serif;
+		letter-spacing: -1.5px;
+		color: #FFF;
+}
+
+#logo span{
+		color: green;
+}
+
+#logoSubText{
+		color: #666666;
+		font-family: Helvetica, serif;
+		float: right;
+		padding-right: 25px;
+		letter-spacing: -1px;
+		margin-top: -20px;
+				
+}
+
+//footer {
+//		height: 75px;
+//		background-color: #252525;
+//		margin-top: 20px;
+//}
+
+#teachWrapper{
+		height: 455px;
+		margin-top: 20px;
+		background-color: #FFFFFF;
+}
+
+input {
+		float: right;
+}
+
+#teachOutside {
+		position: relative;
+		width: 365px;
+		height: 400px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		border: solid;
+		margin-top: 25px;
+		margin-bottom: 35px;
+//		margin-left: 45px;
+		background-color: #808285;
+}
+
+#topContainer {
+		background-color: #313132;
+		height: 195px;
+		width: 350px;
+		margin-left: 7px;
+		margin-top: 7px;
+		
+}
+
+#lcdDisplay {
+		position: absolute;
+		top: 12px;
+		left: 12px;
+		height: 25px;
+		width: 340px;
+		background-color: #5A6362;
+
+}
+
+#bottomContainer {
+		position: absolute;
+		top: 140px;
+		left: 137px;
+		width: 220px;
+		height: 246px;
+		background-color: #313132;
+}
+
+#handle {
+		position: absolute;
+		height: 170px;
+		width: 100px;
+		top: 215px;
+		left: 12px;
+		background-color: #999999;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		border: solid;
+}
+
+#deadManSwitch {
+		position: absolute;
+		top: 16px;
+		left: 72px;
+		width: 30px;
+		height: 140px;
+		background-color: #000;
+}
+
+#robotWrapper {
+		height: 455px;
+		margin-top: 20px;
+		background-color: #999999;
+}
+
+#myCanvas {
+		padding: 30px;
+}
+
+#myCanvas p {
+		font-family: Helvetica, serif;
+		font-size: xx-large;
+		letter-spacing: -1.5px;
+		color: #FFF;
+}
+
+#controlButtonContainer{
+		position: absolute;
+		left: 163px;
+		top: -80px;
+		width: 50px;
+}
+
+#secondContainer{
+		position: absolute;
+		left: 123px;
+		top: -80px;
+		width: 50px;
+}
+
+#thirdContainer{
+		position: absolute;
+		left: 83px;
+		top: 0px;
+		width: 50px;
+}
+
+#fourthContainer{
+		position: absolute;
+		left: 43px;
+		top: 0px;
+		width: 50px;
+}
+
+.functionButton{
+		float: right;;
+		left: 75px;
+		width: 35px;
+		height: 35px;
+		background-color: #808285;
+		margin-top: 5px;
+		
+}
+
+.selected{
+		background-color: yellow;
+		-moz-box-shadow: inset 0 0 2px 2px #000;
+		-webkit-box-shadow: inset 0 0 2px 2px#000;
+		box-shadow: inset 0 0 2px 2px #000;
+}
+
+.functionButton:hover{
+		background-color: yellow;
+		-moz-box-shadow: inset 0 0 2px 2px #000;
+		-webkit-box-shadow: inset 0 0 2px 2px#000;
+		box-shadow: inset 0 0 2px 2px #000;
+}
+
+.functionButton p{
+		font-size: 8px;
+		padding: 5px;
+		text-align: center;
+		text-decoration: none;
+		color: #000;
+}
+
+.functionButton a{
+		text-decoration: none;
+		color: #000;
+}
+
+#tempButtons {
+		display: none;
+		margin: 100px;
+}
+
+#copy {
+		color: #999999;
+		padding: 25px;
+		font-family: Helvetica, serif;
+		letter-spacing: -1px;
+}
+
+#reverseButtons{
+		position: absolute;
+		left: -120px;
+		top: 5px;
+		background-color: #808285;
+		width: 120px;
+		height: 45px;
+
+}
+
+#forwardButtons{
+		position: absolute;
+		top: 5px;
+		left: 7px;
+		background-color: #808285;
+		width: 45px;
+		height: 120px;
+
+}
+
+.reverseButton{
+		display: inline-block;
+		background-color: #252525;
+		height: 35px;
+		width: 10px;
+		margin: 4px;
+		margin-right: -4px;
+}
+
+#forwardContainer{
+		margin-top: 50px;
+}
+
+.forwardButton{
+		background-color: #252525;
+		height: 10px;
+		width: 35px;
+		margin: 4px;
+		margin-right: -4px;
+}
+
+.forwardButton:hover, .reverseButton:hover{
+		background-color: yellow;
+		-moz-box-shadow: inset 0 0 2px 2px #000;
+		-webkit-box-shadow: inset 0 0 2px 2px#000;
+		box-shadow: inset 0 0 2px 2px #000;
+}
+
+#minusSign{
+		font-size: 48px;
+		position: absolute;
+		top: -7px;
+		left: 83px;
+		
+}
+
+#plusSign{
+		font-size: 38px;
+		position: absolute;
+		top: -2px;
+		left: 11px;
+		margin-bottom: 5px;
+}
+
+#lcdContent{
+		float: right;
+		margin: 5px;
+		color: #060B3F;
+		font-family: "DigitaldreamRegular";
+		
+}
+
+#slow5{
+		height: 15px;
+}
+
+#slow4{
+		height: 20px;
+}
+
+#slow3{
+		height: 25px;
+}
+
+#slow2{
+		height: 30px;
+}
+
+#fast1{
+		width: 15px;
+}
+
+#fast2{
+		width: 20px;
+}
+
+#fast3{
+		width: 25px;
+}
+
+#fast4{
+		width: 30px;
+}
+
+#manHalt{
+		height: 75px;
+}
+
+#eStopContainer{
+		position: absolute;
+		width: 75px;
+		height: 75px;
+		background-color: #F59E29;
+		top: 65px;
+		left: 195px; 
+		
+}
+
+#eStop{
+		position: absolute;
+		top: 12px;
+		left: 12px;
+		background-image: url(../../images/robot/eStop.png);
+		height: 50px;
+		width: 50px;
+}
+
+#modeContainer{
+		position: absolute;
+		top: 85px;
+		left: 20px;
+}
+
+.modeButtons{
+		display: inline-block;
+}
+
+.modeButtons span{
+		font-family: Helvetica;
+		font-variant: small-caps;
+		color: #999999;
+		margin-left: 10px;
+}
+
+.ledLight{
+		margin-top: -40px;
+		margin-left: 20px;
+		width: 17px;
+		height: 17px;
+		background-image: url(../../images/robot/ledOff.png);
+		background-repeat: no-repeat;
+}
+
+.on{
+		margin-top: -40px;
+		margin-left: 20px;
+		width: 17px;
+		height: 17px;
+		background-image: url(../../images/robot/ledOn.png);
+		background-repeat: no-repeat;
+}
+
+
+/* FONTS ------------------------------------------------------
+---------------------------------------------------------------
+--------------------------------------------------------------- */
+
+
+
+@font-face {
+    font-family: 'DigitaldreamRegular';
+    src: url('../../fonts/robot/DIGITALDREAM-webfont.eot');
+    src: url('../../fonts/robot/DIGITALDREAM-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/robot/DIGITALDREAM-webfont.woff') format('woff'),
+         url('../../fonts/robot/DIGITALDREAM-webfont.ttf') format('truetype'),
+         url('../../fonts/robot/DIGITALDREAM-webfont.svg#DigitaldreamRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+

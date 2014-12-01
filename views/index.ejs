@@ -1,0 +1,85 @@
+<% include layout %>
+
+	<div class="container-fluid"">
+		<div class="row" >	
+	
+			<div class="col-sm-4 col-md-4">
+				<% include controlAxis %>
+			</div>
+			
+			<div class="col-sm-8 col-md-8">
+			
+				<div id="divJointPositionValue" class="wrapper" name="Joint Position">	
+					<div class="row" >	
+						<div class="col-sm-12">
+							<div class="col-sm-6">
+								<p><label> Joint value (Radiant) </label><p>
+								<p> X1 = <output id="labelX1" style="display:inline;">1</output></p>
+								<p> X2 = <output id="labelX2" style="display:inline;">2</output></p>
+								<p> X3 = <output id="labelX3" style="display:inline;">3</output></p>
+								<p> X4 = <output id="labelX4" style="display:inline;">4</output></p>
+							</div>	
+							<div class="col-sm-6">
+								<p><label> Tool Position (x,y,z) </label><p>
+								<p> X = <output id="labelToolX" style="display:inline;">1</output></p>
+								<p> Y = <output id="labelToolY" style="display:inline;">2</output></p>
+								<p> Z = <output id="labelToolZ" style="display:inline;">3</output></p>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="row" >	
+					<% include robot3D %>
+				</div>
+			</div>
+		</div>	
+		
+		<footer id="footer"></footer>
+	</div>
+	
+	<div id="Help" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+		
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Robot Arm Simulator</h4>
+				</div>
+				<div class="modal-body">
+					<h4>README</h4>
+					<p>
+						...
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>		
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+	<div id="Setting" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+		
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Robot Arm Simulator Setting</h4>
+				</div>
+				<div class="modal-body">
+					<h4>Type Setting</h4>
+					<p>
+						<input type="radio" name="typeControl" onclick="TypeControlHandle(this)" value="External Control"> External Control <br>
+						<input type="radio" name="typeControl" onclick="TypeControlHandle(this)" value="Range Control" checked> Range Control <br>
+						<input type="radio" name="typeControl" onclick="TypeControlHandle(this)" value="Button Control"> Button Control 
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>		
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+	<script src="js/indexPage/settingHandler.js"></script>
+<% include footer %>
